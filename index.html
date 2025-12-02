@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Magnum Fit — Vitaminas y Batidos</title>
+  <meta name="description" content="Magnum Fit — Productos de vitaminas, batidos y todo lo fit. Proteínas, pre-entrenos, smoothies y snacks saludables." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <img src="assets/logo-magnum.png" alt="Magnum Sport Nutrition logo" class="logo" />
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#productos">Productos</a>
+        <a href="#about">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button id="cartBtn" class="cart-btn" aria-haspopup="dialog" aria-controls="cartModal">Carrito (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Todo lo que necesitas para rendir al máximo</h1>
+        <p>Batidos, vitaminas, proteínas y snacks saludables — formulados para tu estilo de vida fit.</p>
+        <a href="#productos" class="btn btn-primary">Ver productos</a>
+      </div>
+    </section>
+
+    <section id="productos" class="container productos-section">
+      <h2>Productos destacados</h2>
+      <div id="productGrid" class="product-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="about" class="container about-section">
+      <h2>Sobre Magnum Fit</h2>
+      <p>Somos una marca comprometida con la calidad. Formulaciones limpias, ingredientes seleccionados y sabores que te motivan a entrenar más duro.</p>
+      <ul class="features">
+        <li>Ingredientes premium</li>
+        <li>Formulaciones sin rellenos innecesarios</li>
+        <li>Envíos rápidos</li>
+      </ul>
+    </section>
+
+    <section id="testimonios" class="container testimonials">
+      <h2>Testimonios</h2>
+      <blockquote>
+        "Los batidos tienen un sabor brutal y me ayudan a recuperar rápido." — Laura R.
+      </blockquote>
+    </section>
+
+    <section id="contacto" class="container contacto-section">
+      <h2>Contacto</h2>
+      <p>¿Preguntas? Escríbenos o llámanos.</p>
+      <form id="contactForm" class="contact-form" action="mailto:ventas@tudominio.com" method="post" enctype="text/plain" novalidate>
+        <label>
+          Nombre
+          <input type="text" name="nombre" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Mensaje
+          <textarea name="mensaje" rows="4" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Magnum Fit — Todos los derechos reservados.</p>
+      <p class="small">Sigue nuestras redes: Instagram • Facebook • TikTok</p>
+    </div>
+  </footer>
+
+  <div id="cartModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="modal-content">
+      <header class="modal-header">
+        <h3 id="cartTitle">Tu carrito</h3>
+        <button class="close-modal" aria-label="Cerrar carrito">&times;</button>
+      </header>
+      <div class="modal-body" id="cartItems"></div>
+      <footer class="modal-footer">
+        <p>Total: <strong id="cartTotal">$0.00</strong></p>
+        <div class="modal-actions">
+          <button id="checkoutBtn" class="btn btn-primary">Pagar</button>
+          <button id="clearCartBtn" class="btn">Vaciar</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
